@@ -1,20 +1,29 @@
 {
-  "name": "shiftlabs-assignment",
+  "name": "shyftlabs-test",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000s\u0000h\u0000i\u0000f\u0000t\u0000l\u0000a\u0000b\u0000s\u0000-\u0000a\u0000s\u0000s\u0000i\u0000g\u0000n\u0000m\u0000e\u0000n\u0000t\u0000\r\u0000 \u0000",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://Mubariz-a18@github.com/Mubariz-a18/shiftlabs-assignment.git"
+    "start": "sequelize db:migrate && node src/index.js",
+    "test": "jest",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mubariz-a18/shiftlabs-assignment/issues"
-  },
-  "homepage": "https://github.com/Mubariz-a18/shiftlabs-assignment#readme"
+  "dependencies": {
+    "apollo-server-express": "^3.12.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.8.1",
+    "graphql-tools": "^9.0.0",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1"
+  }
 }

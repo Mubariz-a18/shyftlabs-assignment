@@ -1,0 +1,29 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shyftlabs-test
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    container_name: my-postgres-container
+    environment:
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - my-network
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+networks:
+  my-network:
+    driver: bridge
