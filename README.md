@@ -16,6 +16,7 @@ This is a Node.js project with Docker integration for easy deployment. It includ
 Before you begin, ensure you have met the following requirements:
 
 - [Node.js](https://nodejs.org/) installed on your machine
+- [NVM](https://github.com/coreybutler/nvm-windows) installed on your machine
 - [Docker](https://www.docker.com/get-started) installed and running
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
@@ -30,12 +31,15 @@ Before you begin, ensure you have met the following requirements:
 2. Change to the project directory:
     cd shyftlabs-assignment
 
-3. Install project dependencies:
+3. Use command to change Node version: 
+   nvm use 20.3.1
+
+4. Install project dependencies:
     npm install
 
 ## Running the Application
 
-4. To run the application locally, use the following command:
+5. To run the application locally, use the following command:
     npm start
     This will start the application on http://localhost:3000.
 
