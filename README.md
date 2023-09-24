@@ -24,11 +24,11 @@ Before you begin, ensure you have met the following requirements:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-node-docker-project.git
+   git clone https://github.com/Mubariz-a18/shyftlabs-assignment
 
 
 2. Change to the project directory:
-    cd your-node-docker-project
+    cd shyftlabs-assignment
 
 3. Install project dependencies:
     npm install
