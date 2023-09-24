@@ -11,8 +11,7 @@ services:
       - my-network
     depends_on:
       - postgres
-    restart:
-      - always
+    restart: always
 
   postgres:
     image: postgres:latest
