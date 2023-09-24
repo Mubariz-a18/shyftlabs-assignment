@@ -31,14 +31,15 @@ Before you begin, ensure you have met the following requirements:
 2. Change to the project directory:
     cd shyftlabs-assignment
 
-3. nvm use 20.3.1
+3. Use command to change Node version: 
+   nvm use 20.3.1
 
 4. Install project dependencies:
     npm install
 
 ## Running the Application
 
-4. To run the application locally, use the following command:
+5. To run the application locally, use the following command:
     npm start
     This will start the application on http://localhost:3000.
 
