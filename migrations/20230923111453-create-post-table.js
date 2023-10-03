@@ -31,7 +31,6 @@ module.exports = {
       }
     });
 
-    // Add a foreign key constraint to link the author_id to a Users table (assuming your Users table is already defined).
     await queryInterface.addConstraint('Posts', {
       type: 'foreign key',
       name: 'fk_author_id',
@@ -46,7 +45,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    // Remove the foreign key constraint first.
     await queryInterface.removeConstraint('Posts', 'fk_author_id');
     await queryInterface.dropTable('Posts');
   }

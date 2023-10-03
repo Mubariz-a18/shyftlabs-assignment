@@ -20,7 +20,6 @@ async function testDatabaseConnection() {
   }
 }
 
-// Call the function to test the database connection
 testDatabaseConnection();
 
 module.exports =sequelize;

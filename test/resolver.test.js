@@ -199,25 +199,21 @@ describe('Resolvers', () => {
             },
         };
         it('should delete a blog post if the user is the author', async () => {
-            // Mock arguments
             const args = {
                 id: 1,
             };
 
-            // Call the resolver
             const result = await Mutation.deleteBlogPost(null, args, context);
 
             expect(result).toBe(true);
         });
 
         it('should throw an error if the user is not the author', async () => {
-            // Mock arguments
             const args = {
                 id: 2,
             };
 
 
-            // Expect the resolver to throw an AuthenticationError
             await expect(async () => {
                 await Mutation.deleteBlogPost(null, args, context);
             }).rejects.toThrowError(AuthenticationError);

@@ -27,7 +27,6 @@ module.exports = {
       }
     });
 
-    // Add a foreign key constraint to link the post_id to the Posts table (assuming your Posts table is already defined).
     await queryInterface.addConstraint('PostComment', {
       type: 'foreign key',
       name: 'fk_post_id',
@@ -40,7 +39,6 @@ module.exports = {
       onUpdate: 'CASCADE'
     });
 
-    // Add a foreign key constraint to link the author_id to a Users table (assuming your Users table is already defined).
     await queryInterface.addConstraint('PostComment', {
       type: 'foreign key',
       name: 'fk_author_id',
@@ -55,7 +53,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    // Remove the foreign key constraints first.
     await queryInterface.removeConstraint('PostComment', 'fk_post_id');
     await queryInterface.removeConstraint('PostComment', 'fk_author_id');
     await queryInterface.dropTable('PostComment');

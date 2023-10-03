@@ -13,8 +13,8 @@ async function startApolloServer() {
     context: async ({ req }) => ({ me: await createContext(req) }),
   });
 
-  await server.start(); // Start the Apollo Server
-  server.applyMiddleware({ app }); // Apply middleware to your Express app
+  await server.start(); 
+  server.applyMiddleware({ app });  
   const PORT = process.env.PORT || 3000;
 
   app.listen(PORT, () => {

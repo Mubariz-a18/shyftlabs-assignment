@@ -11,7 +11,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    // To remove the 'id' column, you can use the following code
     await queryInterface.removeColumn('PostComment', 'id');
   }
 };
